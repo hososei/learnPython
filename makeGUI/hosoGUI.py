@@ -55,3 +55,31 @@ def run():
         variable = action,
         value = 0
     )
+    optionmenu.add_radiobutton(
+    label="Responderを表示しない",
+    variable = action,
+    value = 1
+    )
+
+    canvas = tk.Canvas(
+        root,
+        width = 500,
+        height = 300,
+        relieff = tk.RIDGE,
+        bd=2
+    )
+    canvas.place(x=370, y=0)
+
+    img = tk.PhotoImage(file = "imgl.gif")
+    canvas.create_image(
+        0,
+        0,
+        image = img,
+        anchor = tk,NW
+    )
+
+    root,mainloop()
+
+
+    if __name__ == "__main__":
+        run()
