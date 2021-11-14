@@ -30,3 +30,28 @@ def talk():
         putlog(">" + value)
         putlog(prompt() + response)
         entry.delete(0, tk.END)
+
+""" 画面描画関数
+"""
+def run():
+    global entry, response_area,lb,action
+
+    root = tk.TK()
+    root.geometry("880*560")
+    root.title("Intelligent Agent : ")
+    font = ("Helevetica",14)
+    font_log=("Helevetica",11)
+
+    menubar = tk.Menu(root)
+    root.config(menu=menubar)
+    filemenu = tk.Menu(menubar)
+    menubar.add_cascade(label="ファイル", menu=filemenu)
+    filemenu.add_command(label="閉じる", command=root.destroy)
+    action = tk.IntVar()
+    optionmenu = tk.Menu(menubar)
+    menubar.add_cascade(label="オプション", menu=optionmenu)
+    optionmenu.add_radiobutton(
+        label="Responderを表示",
+        variable = action,
+        value = 0
+    )
