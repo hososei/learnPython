@@ -75,7 +75,7 @@ def run():
         0,
         0,
         image = img,
-        anchor = tk,NW
+        anchor = tk.NW
     )
 
     root,mainloop()
