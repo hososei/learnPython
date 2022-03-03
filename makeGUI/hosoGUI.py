@@ -1,5 +1,4 @@
 import tkinter as tk
-from ptna import *
 
 """ グローバル変数の定義
 """
